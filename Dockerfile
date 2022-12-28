@@ -8,6 +8,6 @@ RUN apt-get update -y && apt-get install -y \
     nfs-common \
     nfs-kernel-server \
     && apt-get clean \
-    && mount -t nfs4 -o nolock 10.150.0.3:/mnt/liferay-nfs /opt/liferay/data
+    && mount -t nfs -o nolock 10.150.0.3:/mnt/liferay-nfs /opt/liferay/data
 
 CMD ["bash"]
